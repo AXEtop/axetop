@@ -1,17 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16882" started-at="2015-07-29T17:40:14Z" finished-at="2015-07-29T17:40:31Z">
+  <suite name="Default suite" duration-ms="102972" started-at="2015-07-30T16:33:29Z" finished-at="2015-07-30T16:35:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16882" started-at="2015-07-29T17:40:14Z" finished-at="2015-07-29T17:40:31Z">
+    <test name="Default test" duration-ms="102972" started-at="2015-07-30T16:33:29Z" finished-at="2015-07-30T16:35:12Z">
       <class name="com.booking.tests.BookingFactory">
-        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="11316" started-at="2015-07-29T17:40:14Z" finished-at="2015-07-29T17:40:25Z">
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="12290" started-at="2015-07-30T16:33:29Z" finished-at="2015-07-30T16:33:41Z">
         </test-method>
-        <test-method status="PASS" signature="test5()" name="test5" duration-ms="2879" started-at="2015-07-29T17:40:25Z" finished-at="2015-07-29T17:40:28Z">
+        <test-method status="FAIL" signature="test1()" name="test1" duration-ms="3633" started-at="2015-07-30T16:33:41Z" finished-at="2015-07-30T16:33:45Z">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\Users\AXE\workspace\bookingFactory\Tools\Users.txt (Системе не удается найти указанный путь)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\Users\AXE\workspace\bookingFactory\Tools\Users.txt (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at com.booking.tools.Framework.readFileAsString(Framework.java:61)
+	at com.booking.tools.Framework.email(Framework.java:75)
+	at com.booking.Pages.HomePage.login(HomePage.java:55)
+	at com.booking.tests.BookingFactory.test1(BookingFactory.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
+]]>
+            </full-stacktrace>
+          </exception>
         </test-method>
-        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="2663" started-at="2015-07-29T17:40:28Z" finished-at="2015-07-29T17:40:31Z">
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="3738" started-at="2015-07-30T16:33:45Z" finished-at="2015-07-30T16:33:49Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="7864" started-at="2015-07-30T16:33:49Z" finished-at="2015-07-30T16:33:56Z">
+        </test-method>
+        <test-method status="PASS" signature="test2()" name="test2" duration-ms="16294" started-at="2015-07-30T16:33:56Z" finished-at="2015-07-30T16:34:13Z">
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="2541" started-at="2015-07-30T16:34:13Z" finished-at="2015-07-30T16:34:15Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="7591" started-at="2015-07-30T16:34:15Z" finished-at="2015-07-30T16:34:23Z">
+        </test-method>
+        <test-method status="PASS" signature="test3()" name="test3" duration-ms="20590" started-at="2015-07-30T16:34:23Z" finished-at="2015-07-30T16:34:43Z">
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="2501" started-at="2015-07-30T16:34:43Z" finished-at="2015-07-30T16:34:46Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="7724" started-at="2015-07-30T16:34:46Z" finished-at="2015-07-30T16:34:54Z">
+        </test-method>
+        <test-method status="FAIL" signature="test4()" name="test4" duration-ms="3205" started-at="2015-07-30T16:34:54Z" finished-at="2015-07-30T16:34:57Z">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\Users\AXE\workspace\bookingFactory\Tools\Users.txt (Системе не удается найти указанный путь)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\Users\AXE\workspace\bookingFactory\Tools\Users.txt (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at com.booking.tools.Framework.readFileAsString(Framework.java:61)
+	at com.booking.tools.Framework.email(Framework.java:75)
+	at com.booking.Pages.HomePage.login(HomePage.java:55)
+	at com.booking.tests.BookingFactory.test4(BookingFactory.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="2442" started-at="2015-07-30T16:34:57Z" finished-at="2015-07-30T16:34:59Z">
+        </test-method>
+        <test-method status="PASS" signature="before()" name="before" is-config="true" duration-ms="6595" started-at="2015-07-30T16:34:59Z" finished-at="2015-07-30T16:35:06Z">
+        </test-method>
+        <test-method status="PASS" signature="test5()" name="test5" duration-ms="3406" started-at="2015-07-30T16:35:06Z" finished-at="2015-07-30T16:35:09Z">
+        </test-method>
+        <test-method status="PASS" signature="after()" name="after" is-config="true" duration-ms="2510" started-at="2015-07-30T16:35:09Z" finished-at="2015-07-30T16:35:12Z">
         </test-method>
       </class>
     </test>
