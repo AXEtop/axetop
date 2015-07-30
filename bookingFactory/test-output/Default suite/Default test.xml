@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="AXE-ПК" name="com.booking.tests.BookingFactory" tests="1" failures="0" timestamp="29 Jul 2015 14:40:31 GMT" time="16.882" errors="0">
+  <testcase name="test5" time="2.879" classname="com.booking.tests.BookingFactory"/>
+</testsuite>
