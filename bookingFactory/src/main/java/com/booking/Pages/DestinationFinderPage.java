@@ -9,7 +9,6 @@ import com.booking.tools.Framework;
 
 public class DestinationFinderPage 
 {
-	Framework framework = new Framework();
 	public static Boolean searchResult;
 	
 	public WebDriver driver;
@@ -47,7 +46,7 @@ public class DestinationFinderPage
 	
 	public DestinationFinderPage checkIfRegionSearchResultIsPresent() throws InterruptedException 
 	{
-		framework.waitForWebElement(destinationPageSearchResult);
+		Framework.waitForWebElement(destinationPageSearchResult);
 		searchResult = destinationPageSearchResult.isDisplayed();
 		return this;
 	}

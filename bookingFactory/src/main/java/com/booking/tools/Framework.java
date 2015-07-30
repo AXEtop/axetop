@@ -26,7 +26,7 @@ import com.booking.Pages.HomePage;
 public class Framework 
 {
 	 public static String date= getDate();
-	 public String userfilepath="C://Users/AXE/workspace/bookingFactory/Tools/Users.txt";
+	 public static String userfilepath=System.getProperty("user.dir")+"/Tools/Users.txt";
 	 
 	 private WebDriver driver;
 
@@ -54,7 +54,7 @@ public class Framework
 		 driver.manage().deleteAllCookies();	  
 	 }
 
-	 public String readFileAsString(String filePath) throws IOException 
+	 public static String readFileAsString(String filePath) throws IOException 
 	 {
         StringBuffer fileData = new StringBuffer();
         BufferedReader reader = new BufferedReader(
@@ -70,14 +70,14 @@ public class Framework
         return fileData.toString();
     }
 	 
-	 public String email() throws IOException
+	 public static String email() throws IOException
 	 {
 			String txtfile = readFileAsString(userfilepath);
 			String[] splittxt = txtfile.split(",");
 			String email = splittxt[1];
 			return email;
 	 }
-	 public String pass() throws IOException
+	 public static String pass() throws IOException
 	 {
 			String txtfile = readFileAsString(userfilepath);
 			String[] splittxt = txtfile.split(",");
@@ -85,7 +85,7 @@ public class Framework
 			return pass;
 	 }
 	 
-	 public void waitForWebElement(WebElement element) throws InterruptedException
+	 public static void waitForWebElement(WebElement element) throws InterruptedException
 	 {
 		 for (int i=0;i<10;i++)
 			{
@@ -98,7 +98,7 @@ public class Framework
 			}
 	 }
 	 
-	 public void saveExcelFileToWithListData(String path, List<String> list) 
+	 public static void saveExcelFileToWithListData(String path, List<String> list) 
 	 {
 		 	@SuppressWarnings("resource")
 			XSSFWorkbook workbook = new XSSFWorkbook();
@@ -122,7 +122,7 @@ public class Framework
 			}			
 	 }
 	 
-	 public int checkExcelEntriesNumber(String path) throws IOException
+	 public static int checkExcelEntriesNumber(String path) throws IOException
 	 {
 		 FileInputStream fis= new FileInputStream(new File(path));
 		 @SuppressWarnings("resource")
@@ -131,7 +131,7 @@ public class Framework
 		 return mySheet.getPhysicalNumberOfRows();
 	 }
 	 
-	public void filldate()
+	public static void filldate()
 	 {
 		 Calendar cal1 = Calendar.getInstance();
 		 cal1.set(Calendar.DAY_OF_MONTH, 22);

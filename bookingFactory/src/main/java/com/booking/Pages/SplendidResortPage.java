@@ -8,7 +8,6 @@ import com.booking.tools.Framework;
 
 public class SplendidResortPage 
 {
-	Framework framework = new Framework();
 	public static Boolean wiFiVerification;
 	public static Boolean parkingVerification;
 	
@@ -23,8 +22,8 @@ public class SplendidResortPage
 	@FindBy (xpath = ".//span[@class='inner_content_filter_api']//span[contains(text(),'Free parking')]") WebElement freeParkingVerification;
 	public SplendidResortPage checkForWiFiAndParking() throws InterruptedException 
 	{
-		framework.waitForWebElement(freeWiFiVerification);
-		framework.waitForWebElement(freeParkingVerification);
+		Framework.waitForWebElement(freeWiFiVerification);
+		Framework.waitForWebElement(freeParkingVerification);
 		wiFiVerification = freeWiFiVerification.isDisplayed();
 		parkingVerification = freeParkingVerification.isDisplayed();
 		return this;

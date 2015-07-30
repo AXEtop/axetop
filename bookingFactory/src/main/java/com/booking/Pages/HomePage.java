@@ -19,7 +19,6 @@ import com.booking.tools.Framework;
 
 public class HomePage 
 {
-	Framework framework = new Framework();
 	public static Date inDate = new Date();
 	public static Date outDate = new Date();
 	public static String searchText = "Montenegro";
@@ -53,8 +52,8 @@ public class HomePage
 	{
 		LoginButton.click();
 		Thread.sleep(2000);
-		EmailField.sendKeys(framework.email());
-		PassField.sendKeys(framework.pass());
+		EmailField.sendKeys(Framework.email());
+		PassField.sendKeys(Framework.pass());
 		ConfirmButton.click();
 		Thread.sleep(5000);
 		return this;
@@ -65,7 +64,7 @@ public class HomePage
 	
 	public HomePage saveFirstAndLastNameInfoInTopRightCorner() throws InterruptedException 
 	{
-		framework.waitForWebElement(userFirstnameVerificationField);
+		Framework.waitForWebElement(userFirstnameVerificationField);
 		UserFirstname = userFirstnameVerificationField.getText();
 		UserLastname = userLastnameVerificationField.getText();
 		return this;
@@ -85,7 +84,7 @@ public class HomePage
 		act.keyPress(KeyEvent.VK_ENTER);
 		act.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(1000);
-		framework.filldate();
+		Framework.filldate();
 		return this;
 	}
 
@@ -140,7 +139,7 @@ public class HomePage
 	
 	public DestinationFinderPage clickOnDiscoverNewDestinations() throws InterruptedException 
 	{
-		framework.waitForWebElement(getDestinationTipsFromWorldTravelersButton);
+		Framework.waitForWebElement(getDestinationTipsFromWorldTravelersButton);
 		getDestinationTipsFromWorldTravelersButton.click();
 		discoverNewDestinationsButton.click();
 		return PageFactory.initElements(driver, DestinationFinderPage.class);
@@ -161,13 +160,13 @@ public class HomePage
 
 	public HomePage saveExcelFileToWithListData(String path, List<String> list) 
 	{
-		framework.saveExcelFileToWithListData(path, list);	
+		Framework.saveExcelFileToWithListData(path, list);	
 		return this;
 	}
 
 	public HomePage checkNumberOfEntriesInExcel(String path) throws IOException 
 	{
-		numberOfRows = framework.checkExcelEntriesNumber(path);
+		numberOfRows = Framework.checkExcelEntriesNumber(path);
 		return this;
 	}
 }

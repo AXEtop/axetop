@@ -12,7 +12,6 @@ import com.booking.tools.Framework;
 
 public class ResultPage 
 {
-	Framework framework = new Framework();
 	public static String hotel = "Splendid Conference & Spa Resort";
 	public static List<String> listOfPopularHotels = new ArrayList<String>();
 	
@@ -38,7 +37,7 @@ public class ResultPage
 	@FindBy (xpath = ".//a[contains(text(),'Splendid Conference & Spa Resort')]") WebElement splendidResortLink;
 	public SplendidResortPage clickHotelInPopularHotels(String hotel2) throws InterruptedException 
 	{
-		framework.waitForWebElement(splendidResortLink);
+		Framework.waitForWebElement(splendidResortLink);
 		splendidResortLink.click();
 		for (String winHandle : driver.getWindowHandles())
 		{
