@@ -33,7 +33,7 @@ public class BookingFactory extends com.booking.tools.Framework
 		.login()
 		.saveFirstAndLastNameInfoInTopRightCorner();
 
-		Assert.assertTrue(HomePage.UserFirstname.contains("Yura") && HomePage.UserLastname.contains("AXE"),"FirsName or LastName is incorrect");
+		Assert.assertTrue(HomePage.UserFirstname.contains("Test") && HomePage.UserLastname.contains("test"),"FirsName or LastName is incorrect");
 
 	}
 	
