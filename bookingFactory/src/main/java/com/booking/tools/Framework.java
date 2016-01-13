@@ -22,19 +22,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.booking.Pages.HomePage;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+
 
 public class Framework 
 {
 	 public static String date= getDate();
 	 public static String userfilepath=System.getProperty("user.dir")+"/Tools/Users.txt";
 	 
-	 private WebDriver driver;
-
+	 protected WebDriver driver;
+	 protected AppiumDriver<WebElement> x;
 	 public WebDriver startDriver() 
 	 {
+		 
+		 AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
+		 service.start();
 		  driver = new FirefoxDriver();
 		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		  driver.manage().window().maximize();
+		  driver.get("http://www.booking.com");
 		  return driver;
 	 }
 
